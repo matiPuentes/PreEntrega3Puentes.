@@ -1,0 +1,39 @@
+// Extend 
+.boton{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: black;
+    color: lightgray;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+// Ver mas, enviar, cuenta.
+
+.boton-verMas{}
+.boton-enviar{}
+.boton-cuenta{}
+
+@each $contexto in verMas, enviar, cuenta {
+    .boton-#{$contexto}{
+        @extend .boton;
+    }
+}
+.boton-cuenta{
+    padding: 5px;
+    margin: 5px;
+    height: 45px;
+}
+.boton-verMas{
+    background-color: rgb(105, 105, 173);
+    color: black; 
+}
+.boton-enviar{
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+}
